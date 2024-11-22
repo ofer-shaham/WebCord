@@ -93,40 +93,8 @@ const config: ForgeConfigFile = {
     }
   },
   makers: [
-    {
-      name: "@electron-forge/maker-zip",
-      platforms: ["win32"]
-    },
-    {
-      name: "@electron-forge/maker-dmg",
-      config: {
-        icon: iconFile + ".icns",
-        debug: getBuildID() === "devel"
-      }
-    },
-    {
+       {
       name: "@reforged/maker-appimage",
-      config: {
-        options: {
-          icon: iconFile + ".png",
-          genericName: desktopGeneric,
-          categories: desktopCategories
-        }
-      }
-    },
-    {
-      name: "@electron-forge/maker-deb",
-      config: {
-        options: {
-          icon: iconFile + ".png",
-          section: "web",
-          genericName: desktopGeneric,
-          categories: desktopCategories
-        }
-      }
-    },
-    {
-      name: "@electron-forge/maker-rpm",
       config: {
         options: {
           icon: iconFile + ".png",
